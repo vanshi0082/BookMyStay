@@ -1,0 +1,173 @@
+/* Reset styles */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen background image */
+
+
+.bg{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Push form to the right */
+    padding-right: 5%;
+    background: url("../../public/assets/imgReg.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* Register container with glassmorphism */
+.register {
+    background: url("../../public/assets/slide.jpg") center/cover no-repeat;
+    width: 400px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark */
+    background-color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease-in-out;
+   
+}
+
+.formtext{
+    font-size: 55px;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 4, 255);
+    font-family: "Dancing Script", serif;
+}
+/* Fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Form layout */
+.register form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.form-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0011ff;
+    margin-bottom: 15px;
+}
+
+/* Input fields */
+.register form input {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background: #000000;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+
+.register form input:focus {
+    border-color: #343caa;
+    box-shadow: 0 0 8px rgba(255, 154, 60, 0.5);
+    outline: none;
+}
+
+/* File upload */
+.register form input[type="file"] {
+    display: none;
+}
+
+/* Upload label */
+.register form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px dashed #666;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.register form label:hover {
+    background-color: rgba(18, 73, 238, 0.1);
+    border-color: #0011ff;
+    box-shadow: 0 0 10px rgba(22, 92, 255, 0.5);
+}
+
+/* Image inside label */
+.register form label img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.register form label p {
+    color: rgb(108, 108, 108);
+}
+
+/* Register Button */
+.register form button {
+    padding: 12px;
+    background: linear-gradient(90deg, #1645ff, #3329f3);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register form button:hover {
+    background: linear-gradient(90deg, #002fff, #0011ff);
+    transform: scale(1.05);
+}
+
+/* Link */
+.register a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.register a:hover {
+    color: rgb(249, 65, 65);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .register {
+        width: 90%;
+    }
+}
