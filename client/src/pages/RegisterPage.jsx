@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../styles/register.css"
 
 const RegisterPage = () => {
+  const [first, setfirst] = useState(second)
   return (
     <div className='bg'>
       <div className='register'>
